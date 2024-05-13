@@ -9,7 +9,7 @@ import useAuth from "../../Hook/useAuth";
 const Details = () => {
     const [startDate, setStartDate] = useState(new Date());
     const services = useLoaderData();
-    const { service_image, providers_image, service_description, service_price, providers_name, service_name } = services;
+    const { service_image, provider_image, service_description, service_price, provider_name, service_name,service_area } = services;
     console.log(services)
     const {user}=useAuth()
 
@@ -77,7 +77,7 @@ const handlePurchase =  event =>{
 
                         <div className="card-body w-[100%] mt-3" >
                             <h2 className="card-title text-3xl font-extrabold">{service_name}</h2>
-                            <p className="dark:text-gray-800 lg:text-lg text-xl font-bold text-slate-500 mt-2 flex-grow-0 ">Location :  <span className="text-purple-500" >{ }</span></p>
+                            <p className="dark:text-gray-800 lg:text-lg text-xl font-bold text-slate-500 mt-2 flex-grow-0 ">Location :  <span className="text-purple-500" >{service_area}</span></p>
                             <hr />
                             <p className="flex-grow-0  text-2xl py-2 font-bold text-amber-600 ">{ }</p>
                             <hr />
@@ -88,8 +88,8 @@ const handlePurchase =  event =>{
                             </p>
 
 
-                            <img src={providers_image} alt="" className="ml-64 object-cover object-center lg:w-20 h-20 w-7 h-7 rounded-full shadow-sm dark:bg-gray-500 dark:border-gray-300" />
-                            <span className="mx-2 text-center bg-slate-100 p-2 rounded-full text-purple-500   font-semibold  "><span className="text-stone-500 font-bold">Providers Name : </span>{providers_name}</span>
+                            <img src={provider_image} alt="" className="ml-64 object-cover object-center lg:w-20 h-20 w-7  rounded-full shadow-sm dark:bg-gray-500 dark:border-gray-300" />
+                            <span className="mx-2 text-center bg-slate-100 p-2 rounded-full text-purple-500   font-semibold  "><span className="text-stone-500 font-bold">Providers Name : </span>{provider_name}</span>
 
                             <span className="mx-2 text-center bg-purple-200 p-2 rounded-full text-purple-500   font-semibold  ">{ }</span>
                             <hr />
@@ -113,7 +113,7 @@ const handlePurchase =  event =>{
 
                                         </div>
                                         <div className="mx-auto text-center">
-                                            <h2 className="mx-auto  text-2xl text-teal-800 fot-bold"> Provider Name : {providers_name}</h2>
+                                            <h2 className="mx-auto  text-2xl text-teal-800 fot-bold"> Provider Name : {provider_name}</h2>
                                         </div>
                                         <form onSubmit={handlePurchase}  method="dialog">
                                             {/* if there is a button in form, it will close the modal */}

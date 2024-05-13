@@ -121,8 +121,8 @@ const Manage = () => {
 
           </div>
           :
-          <div className="mx-auto ">
-            <h1 className="text-2xl font-bold text-orange-800 mx-auto w-[20%] my-10">You, NO service added !</h1>
+          <div className="mx-auto mt-20 ">
+            <h1 className="text-2xl font-bold text-orange-800 mx-auto w-[20%] mt-10">You, NO service added !</h1>
             <img className="mx-auto w-[40%] h-[40%]" src={'https://i.ibb.co/wBwQ4W1/6922095.jpg'} alt="" /></div>
       }
     </div>

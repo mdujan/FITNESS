@@ -12,8 +12,8 @@ console.log(user)
         const service_image = form.image.value; 
         const service_name = form.service_name.value; 
         // const subcategory_name = form.subcategory_name.value; 
-        const short_description= form.short_description.value; 
-        const price= form.price.value; 
+        const service_description= form.service_description.value; 
+        const service_price= form.service_price.value; 
         // const rating = form.rating.value; 
         // const processing_time = form.processing_time.value; 
         // const stock_status = form.stock_status.value; 
@@ -25,7 +25,7 @@ console.log(user)
         const provider_image =user.photoURL;
       
         
-        const newItem = {service_image,service_name,short_description,price,service_area,provider_email,provider_name,provider_image}
+        const newItem = {service_image,service_name,service_description,service_price,service_area,provider_email,provider_name,provider_image}
         console.log(newItem);
         // send data to the server:->
         fetch(`${import.meta.env.VITE_API_URL}/services`,{
@@ -76,13 +76,13 @@ console.log(user)
                   
                    {/* <!-- Short Description --> */}
                    <div className="col-span-full">
-                       <label htmlFor="short_description" className="text-sm">Short Description</label>
-                       <textarea id="short_description" name="short_description" placeholder="Short Description" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" required></textarea>
+                       <label htmlFor="service_description" className="text-sm">Short Description</label>
+                       <textarea id="service_description" name="service_description" placeholder="Short Description" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" required></textarea>
                    </div>
-                   {/* <!-- Price --> */}
+                   {/* <!-- service_price --> */}
                    <div className="col-span-full">
-                       <label htmlFor="price" className="text-sm">Price</label>
-                       <input id="price" type="number" name="price" placeholder="Price" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" required />
+                       <label htmlFor="service_price" className="text-sm">Price</label>
+                       <input id="service_price" type="number" name="service_price" placeholder="Price" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" required />
                    </div>
                    {/* <!-- Rating --> */}
                  

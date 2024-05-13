@@ -69,8 +69,9 @@ const Navbar = () => {
               </div> : <div>{links1}</div>}
             </ul>
           </div >
-
-          <div className=" text-2xl font-bold text-stone-500 ml-4 bg-cover">Fitness <span className=" text-2xl font-bold text-yellow-700 shadow-2xl shadow-purple-400 rounded-full "  >&</span> CRAFT  </div>
+          <img className="w-10 ml-2 h-10"  src={'https://i.ibb.co/BCV5nkk/stationary-bicycle-3643669.png'} alt="" />
+          <div className=" text-2xl font-bold text-stone-500  bg-cover">Fitness <span className=" text-2xl font-bold text-yellow-700 shadow-2xl shadow-purple-400 rounded-full "  >&</span> Therapeutic   </div>
+         
 
         </div>
         {/* <img className="rounded-full top-2 ml-1  left-44 absolute w-[4%] h-[2%]" src="https://i.ibb.co/rbnwdPV/31530356-bird-2.jpg" alt="" /> */}
