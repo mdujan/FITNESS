@@ -50,6 +50,9 @@ const Navbar = () => {
       effect="float"
       type="light"
     /><li>Manage Service</li></NavLink>
+<NavLink to={'/myBook'} className={({ isActive }) => isActive ? "text-green-600 font-bold text-lg shadow-2xl shadow-purple-500 " : "text-lg font-semibold hover:text-green-600 "}><li id='add'>My Booking</li></NavLink>
+<NavLink to={'/bookRequests'} className={({ isActive }) => isActive ? "text-green-600 font-bold text-lg shadow-2xl shadow-purple-500 " : "text-lg font-semibold hover:text-green-600 "}><li id='add'>Bookig Request</li></NavLink>
+
   </>
   const { logOut, user } = useAuth()
   return (
@@ -70,7 +73,7 @@ const Navbar = () => {
             </ul>
           </div >
           <img className="w-10 ml-2 h-10"  src={'https://i.ibb.co/BCV5nkk/stationary-bicycle-3643669.png'} alt="" />
-          <div className=" text-2xl font-bold text-stone-500  bg-cover">Fitness <span className=" text-2xl font-bold text-yellow-700 shadow-2xl shadow-purple-400 rounded-full "  >&</span> Therapeutic   </div>
+         <Link to={'/'}><div className=" text-2xl font-bold text-stone-500  bg-cover">Fitness <span className=" text-2xl font-bold text-yellow-700 shadow-2xl shadow-purple-400 rounded-full "  >&</span> Therapeutic   </div></Link> 
          
 
         </div>

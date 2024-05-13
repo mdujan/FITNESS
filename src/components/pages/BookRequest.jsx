@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../Hook/useAuth";
 import axios from 'axios'
+import { toast } from "react-toastify";
 const BookRequest = () => {
  const {user} =useAuth() || {};
 
@@ -24,6 +25,7 @@ const handleStatus = (value,id) =>{
     axios.patch(`${import.meta.env.VITE_API_URL}/status/${id}?status=${status}` )
                 .then(res=>{
                     console.log(res.data)
+                    toast.success()
                 })
 }
  
@@ -116,8 +118,9 @@ const handleStatus = (value,id) =>{
                           <span className="bg-yellow-300 px-3 p-2 shadow-inner shadow-zinc-700  font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">
                               {/* <span></span> */}
                               <select onChange={(e)=>handleStatus(e.target.value,item._id)} id="service_status" name="service_status" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300">
-                            <option value="in_stock">{item.service_status}</option>
+                            <option value="panding">{item.service_status}</option>
                 <option value="working">working</option>
+                
 
                             <option value="complete">complete</option>
                         </select>
