@@ -18,6 +18,8 @@ import AddServices from './components/pages/AddServices';
 import Manage from './components/pages/Manage';
 import Update from './components/Update';
 import AllServices from './components/pages/AllServices';
+import MyBook from './components/pages/MyBook';
+import BookRequest from './components/pages/BookRequest';
 
 
 const router = createBrowserRouter([
@@ -56,6 +58,14 @@ const router = createBrowserRouter([
         path:"services",
       element:<AllServices></AllServices>,
       loader:() =>fetch(`${import.meta.env.VITE_API_URL}/services`)
+      },
+      {
+        path:"/myBook",
+      element:<MyBook></MyBook>,
+      },
+      {
+        path:"/bookRequests",
+      element:<BookRequest></BookRequest>,
       },
       {
         path:"/update/:id",

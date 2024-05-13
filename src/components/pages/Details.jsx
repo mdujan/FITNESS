@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom";
+import {  useLoaderData } from "react-router-dom";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -9,7 +9,7 @@ import useAuth from "../../Hook/useAuth";
 const Details = () => {
     const [startDate, setStartDate] = useState(new Date());
     const services = useLoaderData();
-    const { service_image, provider_image, service_description, service_price, provider_name, service_name,service_area } = services;
+    const { service_image, provider_image, service_description, service_price, provider_name, service_name,service_area,provider_email } = services;
     console.log(services)
     const {user}=useAuth()
 
@@ -29,13 +29,14 @@ const handlePurchase =  event =>{
     // const stock_status = form.stock_status.value; 
     const address = form.address.value; 
     const service_status = form.service_status.value; 
+    const provider_email = form.provider_email.value; 
    const booking_date = startDate;
      
     const user_email =user.email;
     const user_name =user.displayName;
     const user_image =user.photoURL;
     
-    const booking = {service_image ,service_name,price,service_status,booking_date,address,service_plan,user_email,user_name,user_image,}
+    const booking = {service_image ,service_name,price,service_status,provider_email,booking_date,address,service_plan,user_email,user_name,user_image,}
     console.log(booking);
     // send data to the server:->
     fetch(`${import.meta.env.VITE_API_URL}/book`,{
@@ -104,8 +105,8 @@ const handlePurchase =  event =>{
                             </ul>
                             <div className="mb-6  justify-end">
                                 {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                                <button className="bg-purple-500 text-white text-lg ml-96 mt-4 btn  shadow-2xl shadow-purple-600" onClick={() => document.getElementById('my_modal_4').showModal()}>Add Book</button>
-                                <dialog id="my_modal_4" className="modal">
+                                <button className="bg-purple-500 text-white text-lg ml-96 mt-4 btn  shadow-2xl shadow-purple-600" onClick={() => document.getElementById('my_modal_3').showModal()}>Add Book</button>
+                                <dialog id="my_modal_3" className="modal">
                                     <div className="modal-box w-full max-w-5xl ">
                                         <div className="mx-auto rounded-xl p-7 bg-gray-100  m-1 shadow-purple-400  shadow-2xl h-72 w-72">
                                             <h1 className=" card-title mx-auto lg:text-lg  font-semibold">{service_name}</h1>
@@ -117,7 +118,7 @@ const handlePurchase =  event =>{
                                         </div>
                                         <form onSubmit={handlePurchase}  method="dialog">
                                             {/* if there is a button in form, it will close the modal */}
-                                            <button  className="btn btn-sm btn-circle w-[20%] h-[7%] bg-red-300 text-white text-base absolute right-2 top-2">Press Esc to Exit</button>
+                                            <button type='button'  className="btn btn-sm btn-circle w-[20%] h-[7%] bg-red-300 text-white text-base absolute right-2 top-2">Press Esc to Exit</button>
 
                                             <div>
                                                 <label className="block text-sm text-gray-500 dark:text-gray-300">Address</label>
@@ -161,6 +162,11 @@ const handlePurchase =  event =>{
                                                 <label className="block text-sm text-gray-500 dark:text-gray-300">Price</label>
 
                                                 <input defaultValue={service_price} disabled type="text" name="price" placeholder="price" className="block  mt-2 w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                                            </div>
+                                            <div>
+                                                <label className="block text-sm text-gray-500 dark:text-gray-300">Provider Email</label>
+
+                                                <input defaultValue={provider_email} disabled type="text" name="provider_email" placeholder="provider_email" className="block  mt-2 w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
                                             </div>
 <button className="my-3 btn btn-block bg-amber-700 p-2  text-white text-lg font-semibold">Purchase</button>
                                         </form>
