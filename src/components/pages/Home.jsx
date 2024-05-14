@@ -25,7 +25,8 @@ const Home = () => {
     return (
         <div className="mt-7">
       <Helmet><title> Fitness | Home</title></Helmet>
-     <div className="mb-8">
+      <div className="flex bg-gray-300 p-3 mb-8 rounded-xl">
+            <button className="btn  bg-cyan-500">Offers & Facilities</button>
      <Marquee speed={200} className="text-purple-500 bg-gray-100 border-spacing-3 shadow-2xl shadow-purple-500 p-3 font-bold text-base" pauseOnHover={true}> 
   <Link>Fitness & Therapeutic provides the best services including all types of health ans consultancies.     Todays offer in some services .     So grab that offer immidietly  </Link>
 
@@ -34,12 +35,12 @@ const Home = () => {
      </div>
 {/* sweeper slider:-->  */}
 <>
-<Swiper
+<Swiper    
             spaceBetween={1}
             slidesPerView={1}
             centeredSlides={true}
             autoplay={{
-              delay: 2000,
+              delay: 2500,
               disableOnInteraction: false,
             }}
             pagination={{
@@ -48,18 +49,22 @@ const Home = () => {
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             onAutoplayTimeLeft={onAutoplayTimeLeft}
-            className="mySwiper"
+            className="mySwiper h-[90vh]"
           >
+            <SwiperSlide><img className=' ' src={"https://i.ibb.co/pjtQMtt/fitness-concept-with-fit-man-flexing.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+              data-aos-easing="ease-in-sine" /><h1 className='w-[13%] mb-32  ml-10 p-4 mx-auto font-semibold text-5xl top-36 right- text-amber-100  absolute'>EXPLORE OUR Fitness & Therapeutic </h1></SwiperSlide>
+            
+            <SwiperSlide><img className=' ' src={"https://i.ibb.co/njpZD3G/top-view-lunchbox-keyboard-with-blank-notebook.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+              data-aos-easing="ease-in-sine" /><h1 className='w-[13%] ml-10 p-4 mx-auto text-yellow-300 font-semibold text-5xl top-28 right-  absolute'>VISITING OUR WEBSITE & EXPRESS YOUR CHOOSE </h1></SwiperSlide>
+           
+            <SwiperSlide><img className='-opacity-10' src={"https://i.ibb.co/f42V7h8/aditya-wardhana-2-Tnr1-FMHy2g-unsplash.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+              data-aos-easing="ease-in-sine" /><h1 className='w-[13%] ml-10 p-4 mx-auto font-semibold text-6xl top-28 right-52 text-teal-100  text-white absolute'>Re-inventing the Fitness & Therapeutic Facilities </h1></SwiperSlide>
+
+            <SwiperSlide><img className='' src={"https://i.ibb.co/njpZD3G/top-view-lunchbox-keyboard-with-blank-notebook.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+              data-aos-easing="ease-in-sine" /><h1 className='w-[12%] ml-10 p-4 mx-auto bg-transparent font text-amber-200 font-semibold text-6xl top-28 right-52 text-white absolute'>Bringing Wellness to Fitness & Therapeutic</h1></SwiperSlide>
+
             <SwiperSlide><img className=' ' src={"https://i.ibb.co/dL9KyR8/28359-1.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
-              data-aos-easing="ease-in-sine" /></SwiperSlide>
-            <SwiperSlide><img className=' ' src={"https://i.ibb.co/Yd7zF6k/top-view-tailor-working-fabric.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
-              data-aos-easing="ease-in-sine" /></SwiperSlide>
-            <SwiperSlide><img className=' ' src={"https://i.ibb.co/f42V7h8/aditya-wardhana-2-Tnr1-FMHy2g-unsplash.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
-              data-aos-easing="ease-in-sine" /></SwiperSlide>
-            <SwiperSlide><img className='' src={"https://i.ibb.co/Yd7zF6k/top-view-tailor-working-fabric.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
-              data-aos-easing="ease-in-sine" /></SwiperSlide>
-            <SwiperSlide><img className=' ' src={"https://i.ibb.co/dL9KyR8/28359-1.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
-              data-aos-easing="ease-in-sine" /></SwiperSlide>
+              data-aos-easing="ease-in-sine" /><h1 className='w-[12%] ml-10 p-4 mx-auto bg-transparent font text-amber-200 font-semibold text-6xl top-28 right-52 text-white absolute'>Bringing Wellness to Fitness & Therapeutic</h1></SwiperSlide>
 
             <div className="autoplay-progress relative" slot="container-end">
               <svg className="absolute  top-0" viewBox="0 0 0 0" ref={progressCircle}>

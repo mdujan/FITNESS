@@ -32,11 +32,11 @@ const Cards = ({ item }) => {
 					<h1 className="text-2xl font-bold text-teal-700">{service_name}</h1>
 				</div>
 				<div className="space-y-3 ">
-					<p className="text-sm">
-						<span className="text-xl font-semibold">Description : </span>{service_description}
+					<p className="text-sm my-3">
+						<span className="my-2 text-xl font-semibold text-yellow-500">Description : </span>{service_description.slice(0,93)}
 					</p>
 					<div >
-						<span className="text-xl font-semibold text-zinc-900 "> price :</span> <span className="ml-1 text-xl font-semibold text-amber-500">{service_price}</span>
+						<span className="text-xl font-semibold text-zinc-900  "> price :</span> <span className="bg-zinc-500 rounded-2xl p-2   ml-1 text-xl font-semibold text-amber-500">{service_price}</span>
 					</div>
 
 
