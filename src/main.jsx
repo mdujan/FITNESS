@@ -43,16 +43,16 @@ const router = createBrowserRouter([
       },
       {
         path:"/details/:id",
-      element:<Details></Details>,
+      element:<PrivateRoute><Details></Details></PrivateRoute>,
        loader:({params})=>fetch(`${import.meta.env.VITE_API_URL}/details/${params.id}`),
       },
       {
         path:"/add",
-      element:<AddServices></AddServices>,
+      element:<PrivateRoute><AddServices></AddServices></PrivateRoute>,
       },
       {
         path:"manage",
-      element:<Manage></Manage>,
+      element:<PrivateRoute><Manage></Manage></PrivateRoute>,
       },
       {
         path:"services",
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/myBook",
-      element:<MyBook></MyBook>,
+      element:<PrivateRoute><MyBook></MyBook></PrivateRoute>,
       },
       {
         path:"/bookRequests",

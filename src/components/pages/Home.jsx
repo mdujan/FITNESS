@@ -8,7 +8,7 @@ import { useRef } from "react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
+import Marquee from "react-fast-marquee";
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -23,9 +23,15 @@ const Home = () => {
 
     console.log(items)
     return (
-        <div>
-      <Helmet><title> Art & Craft | Home</title></Helmet>
+        <div className="mt-7">
+      <Helmet><title> Fitness | Home</title></Helmet>
+     <div className="mb-8">
+     <Marquee speed={200} className="text-purple-500 bg-gray-100 border-spacing-3 shadow-2xl shadow-purple-500 p-3 font-bold text-base" pauseOnHover={true}> 
+  <Link>Fitness & Therapeutic provides the best services including all types of health ans consultancies.     Todays offer in some services .     So grab that offer immidietly  </Link>
 
+
+</Marquee>
+     </div>
 {/* sweeper slider:-->  */}
 <>
 <Swiper
@@ -44,15 +50,15 @@ const Home = () => {
             onAutoplayTimeLeft={onAutoplayTimeLeft}
             className="mySwiper"
           >
-            <SwiperSlide><img className='rounded-badge ' src={"https://i.ibb.co/dL9KyR8/28359-1.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+            <SwiperSlide><img className=' ' src={"https://i.ibb.co/dL9KyR8/28359-1.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
               data-aos-easing="ease-in-sine" /></SwiperSlide>
-            <SwiperSlide><img className='rounded-badge ' src={"https://i.ibb.co/Yd7zF6k/top-view-tailor-working-fabric.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+            <SwiperSlide><img className=' ' src={"https://i.ibb.co/Yd7zF6k/top-view-tailor-working-fabric.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
               data-aos-easing="ease-in-sine" /></SwiperSlide>
-            <SwiperSlide><img className='rounded-badge ' src={"https://i.ibb.co/f42V7h8/aditya-wardhana-2-Tnr1-FMHy2g-unsplash.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+            <SwiperSlide><img className=' ' src={"https://i.ibb.co/f42V7h8/aditya-wardhana-2-Tnr1-FMHy2g-unsplash.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
               data-aos-easing="ease-in-sine" /></SwiperSlide>
-            <SwiperSlide><img className='rounded-badge ' src={"https://i.ibb.co/Yd7zF6k/top-view-tailor-working-fabric.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+            <SwiperSlide><img className='' src={"https://i.ibb.co/Yd7zF6k/top-view-tailor-working-fabric.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
               data-aos-easing="ease-in-sine" /></SwiperSlide>
-            <SwiperSlide><img className='rounded-badge ' src={"https://i.ibb.co/dL9KyR8/28359-1.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+            <SwiperSlide><img className=' ' src={"https://i.ibb.co/dL9KyR8/28359-1.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
               data-aos-easing="ease-in-sine" /></SwiperSlide>
 
             <div className="autoplay-progress relative" slot="container-end">
@@ -63,9 +69,12 @@ const Home = () => {
             </div>
           </Swiper>
         </>
+        <div className="w-[23%] mx-auto  my-20"><h2 className="mx-auto  w-[100%]  font-bold text-4xl text-stone-700 ">Popular Services</h2>
+        <hr />
+        </div>
+           
 
-
-        <div className="lg:grid grid-cols-3 gap-6 col-span-1 mt-14">
+        <div className="lg:grid grid-cols-3 gap-6 col-span-1 mt-14 mx-auto w-[90%]">
            {
            items.slice(0,6).map(item => <Cards item={item} key={item._id} ></Cards>)
            

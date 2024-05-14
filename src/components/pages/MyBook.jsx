@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../Hook/useAuth";
+import { Helmet } from "react-helmet-async";
 
 
 const MyBook = () => {
@@ -19,7 +20,7 @@ const MyBook = () => {
       {
         bookItems?.length?
           <div className="">
-            {/* <Helmet><title>Art & Crft | my list</title></Helmet> */}
+            <Helmet><title>Fitness | my booking</title></Helmet>
             <div className="w-[23%] mx-auto mb-14 mt-6"><h2 className="mx-auto  w-[100%]  font-bold text-4xl text-stone-700 ">My booked Service</h2></div>
             <div>
               <hr className="w-[30%] mx-auto mb-9" />

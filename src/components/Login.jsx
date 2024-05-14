@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useAuth from "../Hook/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
@@ -44,20 +45,20 @@ const handleSocialLogin = (socialProvider) => {
 };
     return (
         <div>
-        {/* <Helmet><title>Art & Craft | Login</title></Helmet> */}
+        <Helmet><title>Fitness | Login</title></Helmet>
         <ToastContainer />
-        <div className="w-full mx-auto  shadow-amber-400 shadow-2xl rounded-badge  max-w-md p-8 bg-no-repeat space-y-3 bg-cover rounded-xl dark:bg-gray-50 dark:text-gray-800"style={{backgroundImage: 'url(https://i.ibb.co/t4Qk7hW/abstract-background-with-white-bokeh-lights.jpg)'}} >
+        <div className="w-full mt-9 mx-auto  shadow-amber-400 shadow-2xl rounded-badge  max-w-2xl p-8  space-y-3  rounded-xl bg-cover dark:bg-gray-50 dark:text-gray-800"style={{backgroundImage: 'url(https://i.ibb.co/1G9MNn9/update-gym-page.jpg)'}} >
             <h1 className="text-2xl font-bold text-center">Login</h1>
             <form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
                 <div className="space-y-1 text-sm">
-                    <label htmlFor="email" className="block dark:text-gray-600">email</label>
+                    <label htmlFor="email" className="block dark:text-gray-600 text-amber-400 font-bold">email</label>
                     <input type="text" name="email" id="email" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600 " {...register("email", { required: true })} />
                     {errors.email && <p className="text-red-600  font-semibold ml-1"> 😞 This field is required</p>}
 
 
                 </div>
                 <div className="space-y-1 text-sm">
-                    <label htmlFor="password" className="block dark:text-gray-600">Password</label>
+                    <label htmlFor="password" className="block dark:text-gray-600 text-amber-400 font-bold">Password</label>
                     <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"{...register("password", { required: true, minLength: 6, Pattern: /[A-Za-z]{3}/ })} />
                     {errors.password && errors.password.type === "required" && (
                         <span className="text-red-600  font-semibold ml-1">😞This field is required</span>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../Hook/useAuth";
 import { Navigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Update = () => {
     const {user} = useAuth() || {};
@@ -26,8 +27,8 @@ const handleUpdate =(event)=>{
     const service_image = form.service_image.value;
 const service_name = form.service_name.value; 
 // const subcategory_name = form.subcategory_name.value; 
-const short_description= form.short_description.value; 
-const price= form.price.value; 
+const service_description= form.service_description.value; 
+const service_price= form.service_price.value; 
 // const rating = form.rating.value; 
 // const processing_time = form.processing_time.value; 
 // const stock_status = form.stock_status.value; 
@@ -39,7 +40,7 @@ const provider_email =user.email;
 const provider_name =user.displayName;
 const provider_image =user.photoURL;
 
-const info = {service_image,service_name,short_description,price,service_area,provider_email,provider_name,provider_image};
+const info = {service_image,service_name,service_description,service_price,service_area,provider_email,provider_name,provider_image};
 
     fetch(`${import.meta.env.VITE_API_URL}/updateItem/${id}`,{
     method:'PUT',
@@ -70,10 +71,11 @@ const info = {service_image,service_name,short_description,price,service_area,pr
     return (
         <section className="p-6 mx-28 rounded-xl dark:bg-gray-100 dark:text-gray-900 bg-purple-300">
         <form onSubmit={handleUpdate} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
+        <Helmet><title>Fitness | update</title></Helmet>
             <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
                 {/* <!-- Personal Information --> */}
-                <div className="space-y-2 col-span-full lg:col-span-1">
-                    <h2>UPDATE</h2>
+                <div className="space-y-2 font-bold col-span-full lg:col-span-1">
+                    <h2 className="bg-amber-500 rounded-2xl  ml-32 text-center">UPDATE</h2>
                 </div>
                 <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                     {/* <!-- Image URL --> */}
@@ -89,13 +91,13 @@ const info = {service_image,service_name,short_description,price,service_area,pr
                     
                     {/* <!-- Short Description --> */}
                     <div className="col-span-full">
-                        <label htmlFor="short_description" className="text-sm">Short Description</label>
-                        <textarea defaultValue={update.short_description} id="short_description" name="short_description" placeholder="Short Description" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"></textarea>
+                        <label htmlFor="service_description" className="text-sm">Short Description</label>
+                        <textarea defaultValue={update.service_description} id="service_description" name="short_description" placeholder="Short Description" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"></textarea>
                     </div>
                     {/* <!-- Price --> */}
                     <div className="col-span-full">
-                        <label htmlFor="price" className="text-sm">Price</label>
-                        <input defaultValue={update.price} id="price" type="number" name="price" placeholder="Price" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+                        <label htmlFor="service_price" className="text-sm">Price</label>
+                        <input defaultValue={update.service_price} id="service_price" type="number" name="price" placeholder="Price" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
                     </div>
                   
                     {/* <!-- Processing Time --> */}

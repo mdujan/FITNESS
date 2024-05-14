@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../Hook/useAuth";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Manage = () => {
   const { user } = useAuth() || {};
@@ -51,7 +52,7 @@ const Manage = () => {
       {
         myItems?.length?
           <div className="">
-            {/* <Helmet><title>Art & Crft | my list</title></Helmet> */}
+            <Helmet><title>Fitness | Manage service</title></Helmet>
             <div className="w-[23%] mx-auto mb-14 mt-6"><h2 className="mx-auto  w-[100%]  font-bold text-4xl text-stone-700 ">Manage My Service</h2></div>
             <div>
               <hr className="w-[30%] mx-auto mb-9" />
@@ -92,9 +93,9 @@ const Manage = () => {
                   <div className="card-body border-2 border-amber-400">
                     <h2 className="card-title ">
                       {item.service_name}
-                      <div className="badge badge-secondary shadow-amber-300 shadow-2xl w-28 h-10 text-zinc-700 font-bold text-base ">Price :  <span className="ml-1 text-gray-200 font-bold">{item.price}</span></div>
+                      <div className="badge badge-secondary shadow-amber-300 shadow-2xl w-36 h-10 text-zinc-700 font-bold text-base ">Price :  <span className="ml-1 text-gray-200 font-bold">{item.service_price}</span></div>
                     </h2>
-                    <p className="text-gray-600 font-medium"><span className="font-bold text-amber-700 text-lg">Description : </span>{item.short_description}</p>
+                    <p className="text-gray-600 font-medium"><span className="font-bold text-amber-700 text-lg">Description : </span>{item.service_description}</p>
                     <p className="text-gray-600 font-medium text-yellow-700 absolute -bottom-7 -left-10 -rotate-4 rounded-full bg-indigo-100 p-3 shadow-2xl shadow-amber-300" >{item.provider_email}</p>
                     <div className="card-actions justify-end">
                       {/* {item.price} */}

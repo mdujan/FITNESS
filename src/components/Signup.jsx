@@ -47,13 +47,13 @@ const Signup = () => {
         <div>
              {/* <Helmet><title>Art & Craft | Register</title></Helmet> */}
             <ToastContainer />
-            <div className="w-full mx-auto  bg-purple-400 shadow-amber-400 shadow-2xl rounded-badge bg-cover max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800"style={{backgroundImage: 'url(https://i.ibb.co/t4Qk7hW/abstract-background-with-white-bokeh-lights.jpg)'}} data-aos="flip-left"
+            <div className="w-full mx-auto  bg-purple-400 shadow-amber-400 shadow-2xl rounded-badge bg-cover max-w-5xl p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800"style={{backgroundImage: 'url(https://i.ibb.co/1G9MNn9/update-gym-page.jpg)'}} data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000">
                 <h1 className="text-2xl font-bold text-center">Register</h1>
                 <form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="username" className="block dark:text-gray-600">Username</label>
+                        <label htmlFor="username" className="block dark:text-gray-600 text-amber-400 font-bold">Username</label>
                         <input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"  {...register("name", { required: true })} />
                         {errors.exampleRequired && <p className="text-red-600  font-semibold ml-1"> 😞This field is required</p>}
 
@@ -61,19 +61,19 @@ const Signup = () => {
 
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="email" className="block dark:text-gray-600">Email</label>
+                        <label htmlFor="email" className="block dark:text-gray-600 text-amber-400 font-bold">Email</label>
                         <input type="text" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"  {...register("email", { required: true })} />
                         {errors.email && <p className="text-red-600  font-semibold ml-1"> 😞This field is required</p>}
 
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="photoUrl" className="block dark:text-gray-600">Photo url</label>
+                        <label htmlFor="photoUrl" className="block dark:text-gray-600 text-amber-400 font-bold">Photo url</label>
                         <input type="text" name="photoURL" id="photoURL" placeholder="photoUrl" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" {...register("photoUrl", { required: true })} />
                         {errors.photoUrl && <p className="text-red-600 pt-1 font-semibold ml-6"> This field is required</p>}
 
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="password" className="block dark:text-gray-600">Password</label>
+                        <label htmlFor="password" className="block dark:text-gray-600 text-amber-400 font-bold">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" {...register("password", { required: true, minLength: 6, pattern: /^(?=.*[a-z])(?=.*[A-Z]).+$/ })} />
 
 
@@ -90,7 +90,7 @@ const Signup = () => {
                         )}
 
                     </div>
-                    <button className="btn w-full rounded-b-badge p-3 text-center rounded-sm dark:text-gray-50 bg-gray-300">Sign in</button>
+                    <button className="btn w-full rounded-b-badge p-3 text-center rounded-sm dark:text-gray-50 bg-gray-300 text-gray-800 font-bold">Sign up</button>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>

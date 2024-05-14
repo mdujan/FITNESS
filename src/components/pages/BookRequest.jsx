@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../Hook/useAuth";
 import axios from 'axios'
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 const BookRequest = () => {
  const {user} =useAuth() || {};
 
@@ -35,7 +36,7 @@ const handleStatus = (value,id) =>{
         {
           bookings?.length?
             <div className="">
-              {/* <Helmet><title>Art & Crft | my list</title></Helmet> */}
+              <Helmet><title>Fitness | booking request </title></Helmet>
               <div className="w-[35%] mx-auto mb-14 mt-6"><h2 className="mx-auto  w-[100%]  font-bold text-4xl text-stone-700 ">My Service <span className="text-yellow-500 font-semibold">(panding purchase)</span></h2></div>
               <div>
                 <hr className="w-[30%] mx-auto mb-9" />
@@ -83,6 +84,7 @@ const handleStatus = (value,id) =>{
                   <col />
                   <col />
                   <col />
+                  <col />
                   <col className="w-36 "  />
               </colgroup>
               <thead className="dark:bg-gray-300">
@@ -93,6 +95,7 @@ const handleStatus = (value,id) =>{
                       <th className="p-3 text-bold text-lg ">Address</th>
                       <th className="p-3 text-bold text-lg  text-right">Price</th>
                       <th className="p-3 text-bold text-lg ">Status</th>
+                      <th className="p-3 text-bold text-lg ml-4 ">Book user</th>
                   </tr>
               </thead>
               <tbody>
@@ -115,7 +118,7 @@ const handleStatus = (value,id) =>{
                           <p>{item.price}</p>
                       </td>
                       <td   className="p-3 text-right ">
-                          <span className="bg-yellow-300 px-3 p-2 shadow-inner shadow-zinc-700  font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">
+                          <span className="bg-yellow-300  p-2 shadow-inner shadow-zinc-700  font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">
                               {/* <span></span> */}
                               <select onChange={(e)=>handleStatus(e.target.value,item._id)} id="service_status" name="service_status" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300">
                             <option value="panding">{item.service_status}</option>
@@ -125,6 +128,10 @@ const handleStatus = (value,id) =>{
                             <option value="complete">complete</option>
                         </select>
                           </span>
+                      </td>
+                      <td className="p-3 ml-6">
+                          <p>{item.user_email}</p>
+                         
                       </td>
                   </tr>
               </tbody>
