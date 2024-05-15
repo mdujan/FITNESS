@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 
 
 const Cards = ({ item }) => {
-	const { service_image, provider_image, service_description, service_price, providers_name, service_name, _id } = item;
+	const { service_image, provider_image, service_description, service_price, provider_name, service_name, _id } = item;
 	return (
 
-		<div className="rounded-md shadow-md sm:w-96 dark:bg-gray-50 dark:text-gray-800 w-full h-fit">
+		<div className="bg-amber-50 rounded-md shadow-md sm:w-96 dark:bg-gray-50 dark:text-gray-800 w-full h-fit">
 			<div className="flex items-center justify-between p-3">
 				<div className="flex items-center space-x-2">
 					<img src={provider_image} alt="" className="object-cover object-center w-8 h-8 rounded-full shadow-sm dark:bg-gray-500 dark:border-gray-300" />
 					<div className="-space-y-1">
-						<h2 className="text-sm font-semibold leading-none text-amber-900" >{providers_name}</h2>
+						<h2 className="text-sm font-semibold leading-none text-amber-900" >{provider_name}</h2>
 
 					</div>
 				</div>

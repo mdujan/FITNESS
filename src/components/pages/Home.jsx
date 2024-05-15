@@ -57,13 +57,13 @@ const Home = () => {
             <SwiperSlide><img className=' ' src={"https://i.ibb.co/njpZD3G/top-view-lunchbox-keyboard-with-blank-notebook.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
               data-aos-easing="ease-in-sine" /><h1 className='w-[13%] ml-10 p-4 mx-auto text-yellow-300 font-semibold text-5xl top-28 right-  absolute'>VISITING OUR WEBSITE & EXPRESS YOUR CHOOSE </h1></SwiperSlide>
            
-            <SwiperSlide><img className='-opacity-10' src={"https://i.ibb.co/f42V7h8/aditya-wardhana-2-Tnr1-FMHy2g-unsplash.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+            <SwiperSlide><img className='-opacity-10' src={"https://i.ibb.co/QchbZ36/doctor-helping-patient-rehabilitation.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
               data-aos-easing="ease-in-sine" /><h1 className='w-[13%] ml-10 p-4 mx-auto font-semibold text-6xl top-28 right-52 text-teal-100  text-white absolute'>Re-inventing the Fitness & Therapeutic Facilities </h1></SwiperSlide>
 
             <SwiperSlide><img className='' src={"https://i.ibb.co/njpZD3G/top-view-lunchbox-keyboard-with-blank-notebook.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
               data-aos-easing="ease-in-sine" /><h1 className='w-[12%] ml-10 p-4 mx-auto bg-transparent font text-amber-200 font-semibold text-6xl top-28 right-52 text-white absolute'>Bringing Wellness to Fitness & Therapeutic</h1></SwiperSlide>
 
-            <SwiperSlide><img className=' ' src={"https://i.ibb.co/dL9KyR8/28359-1.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
+            <SwiperSlide><img className=' ' src={"https://i.ibb.co/QchbZ36/doctor-helping-patient-rehabilitation.jpg"} style={{ width: "100%", margin: "0% auto" }} alt=""
               data-aos-easing="ease-in-sine" /><h1 className='w-[12%] ml-10 p-4 mx-auto bg-transparent font text-amber-200 font-semibold text-6xl top-28 right-52 text-white absolute'>Bringing Wellness to Fitness & Therapeutic</h1></SwiperSlide>
 
             <div className="autoplay-progress relative" slot="container-end">
