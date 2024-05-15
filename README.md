@@ -9,3 +9,4 @@
 7. My booking in dashboard user can see this when user logged in.
 8. some extra section in home page.
 9. Theme implementation .
+10. Search impliment done. 

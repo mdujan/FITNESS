@@ -40,7 +40,7 @@ const Navbar = () => {
   </>
   const links2 = <>
 
-    <NavLink to={'/add'} className={({ isActive }) => isActive ? "text-green-600 font-bold text-lg shadow-2xl shadow-purple-500 " : "text-lg font-semibold hover:text-green-600 "}><li id='add'>Add Items</li></NavLink>
+    <NavLink to={'/add'} className={({ isActive }) => isActive ? "text-green-600 font-bold text-lg shadow-2xl shadow-purple-500 " : "text-lg font-semibold hover:text-green-600 "}><li id='add'>Add Service</li></NavLink>
 
     <NavLink to={'/manage'} className={({ isActive }) => isActive ? "text-green-600 font-bold text-lg shadow-2xl shadow-purple-500 " : "text-lg font-semibold hover:text-green-600 "}><ReactTooltip
       className='mr-14 p-2'
