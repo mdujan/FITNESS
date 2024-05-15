@@ -1,8 +1,11 @@
-# React + Vite
+# PROJECTS NAME : Fitness & Therapeutic 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Dynamic navbar in tis projects .
+2. Only Logged in User can see then dashboard.
+3. Swiper slider in home section.
+4. using marquee in Home.
+5. User can see dashboard add service.
+6. User can manage his/her services.
+7. My booking in dashboard user can see this when user logged in.
+8. some extra section in home page.
+9. Theme implementation .
