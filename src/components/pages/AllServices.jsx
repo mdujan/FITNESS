@@ -20,6 +20,24 @@ useEffect(()=>{
 },[])
 
 
+// useEffect(()=>{
+//         const getData =async () =>{
+//             const  {data} = await axios(`${import.meta.env.VITE_API_URL}/search?search=${search}`)
+//             setItems(data)
+//         }
+//         getData()
+// },[search])
+
+
+// const handleStatus = (value,id) =>{
+//   const status = value
+//   console.log(status)    
+//   axios.patch(`${import.meta.env.VITE_API_URL}/status/${id}?status=${status}` )
+//               .then(res=>{
+//                   console.log(res.data)
+//                   toast.success()
+//               })
+// }
 
 const handleSearch= e =>{
     e.preventDefault()
