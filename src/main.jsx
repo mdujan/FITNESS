@@ -57,7 +57,7 @@ const router = createBrowserRouter([
       {
         path:"services",
       element:<AllServices></AllServices>,
-      loader:() =>fetch(`${import.meta.env.VITE_API_URL}/services`)
+      // loader:() =>fetch(`${import.meta.env.VITE_API_URL}/services`)
       },
       {
         path:"/myBook",

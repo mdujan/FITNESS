@@ -111,7 +111,7 @@ const handleStatus = (value,id) =>{
                   
                       </td>
                       <td className="p-3">
-                          <p>{item.address}</p>
+                          <p>{item.address}</p>আa
                          
                       </td>
                       <td className="p-3 text-right">

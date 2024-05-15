@@ -45,6 +45,7 @@ const handleSocialLogin = (socialProvider) => {
 };
     return (
         <div>
+            
         <Helmet><title>Fitness | Login</title></Helmet>
         <ToastContainer />
         <div className="w-full mt-9 mx-auto  shadow-amber-400 shadow-2xl rounded-badge  max-w-2xl p-8  space-y-3  rounded-xl bg-cover dark:bg-gray-50 dark:text-gray-800"style={{backgroundImage: 'url(https://i.ibb.co/1G9MNn9/update-gym-page.jpg)'}} >
