@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import Marquee from "react-fast-marquee";
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Feedbacks from "../Feedbacks";
 
 const Home = () => {
     const items = useLoaderData();
@@ -135,6 +136,11 @@ const Home = () => {
               </form>
             </div>
           </section>
+          {/* review section:--- */}
+
+            <Feedbacks></Feedbacks>
+
+
            </div>
 
     );

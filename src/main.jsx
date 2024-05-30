@@ -20,6 +20,7 @@ import Update from './components/Update';
 import AllServices from './components/pages/AllServices';
 import MyBook from './components/pages/MyBook';
 import BookRequest from './components/pages/BookRequest';
+import ServiceFeedback from './components/ServiceFeedback';
 
 
 const router = createBrowserRouter([
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path:"/add",
       element:<PrivateRoute><AddServices></AddServices></PrivateRoute>,
+      },
+      {
+        path:"/feedback",
+      element:<PrivateRoute><ServiceFeedback></ServiceFeedback></PrivateRoute>,
       },
       {
         path:"manage",

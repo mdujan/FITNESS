@@ -52,6 +52,7 @@ const Navbar = () => {
     /><li>Manage Service</li></NavLink>
 <NavLink to={'/myBook'} className={({ isActive }) => isActive ? "text-green-600 font-bold text-lg shadow-2xl shadow-purple-500 " : "text-lg font-semibold hover:text-green-600 "}><li id='add'>My Booking</li></NavLink>
 <NavLink to={'/bookRequests'} className={({ isActive }) => isActive ? "text-green-600 font-bold text-lg shadow-2xl shadow-purple-500 " : "text-lg font-semibold hover:text-green-600 "}><li id='add'>Booking Request</li></NavLink>
+<NavLink to={'/feedback'} className={({ isActive }) => isActive ? "text-green-600 font-bold text-lg shadow-2xl shadow-purple-500 " : "text-lg font-semibold hover:text-green-600 "}><li id='add'>Service feedback</li></NavLink>
 
   </>
   const { logOut, user } = useAuth()
